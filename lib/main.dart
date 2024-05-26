@@ -57,13 +57,16 @@ class _MyHomePageState extends State<MyHomePage> {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget>[
             _buildExerciseButton(context, Constants.exercise1Title, () {
-              _navigateToExercise1(const Exercise1Route1());
+              _navigateToExercise(const Exercise1Route1());
             }),
             _buildExerciseButton(context, Constants.exercise2Title, () {
-              _navigateToExercise1(const Exercise2Route1());
+              _navigateToExercise(const Exercise2Route1());
             }),
             _buildExerciseButton(context, Constants.exercise3Title, () {
-              _navigateToExercise1(const Exercise3Route1());
+              _navigateToExercise(const Exercise3Route1());
+            }),
+            _buildExerciseButton(context, Constants.exercise4Title, () {
+              _navigateToExercise(const Exercise3Route1());
             }),
           ],
         ),
@@ -71,7 +74,7 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 
-  void _navigateToExercise1(PageRouteInfo<dynamic> route) {
+  void _navigateToExercise(PageRouteInfo<dynamic> route) {
     context.pushRoute(route);
   }
 
