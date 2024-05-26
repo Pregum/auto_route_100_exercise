@@ -43,6 +43,18 @@ abstract class _$MainRouter extends RootStackRouter {
         ),
       );
     },
+    Exercise3Route1.name: (routeData) {
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const Exercise3Page1(),
+      );
+    },
+    Exercise3Route2.name: (routeData) {
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const Exercise3Page2(),
+      );
+    },
     MyHomeRoute.name: (routeData) {
       return AutoRoutePage<dynamic>(
         routeData: routeData,
@@ -130,6 +142,34 @@ class Exercise2Route2Args {
   String toString() {
     return 'Exercise2Route2Args{key: $key, textFromThePreviousPage: $textFromThePreviousPage}';
   }
+}
+
+/// generated route for
+/// [Exercise3Page1]
+class Exercise3Route1 extends PageRouteInfo<void> {
+  const Exercise3Route1({List<PageRouteInfo>? children})
+      : super(
+          Exercise3Route1.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'Exercise3Route1';
+
+  static const PageInfo<void> page = PageInfo<void>(name);
+}
+
+/// generated route for
+/// [Exercise3Page2]
+class Exercise3Route2 extends PageRouteInfo<void> {
+  const Exercise3Route2({List<PageRouteInfo>? children})
+      : super(
+          Exercise3Route2.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'Exercise3Route2';
+
+  static const PageInfo<void> page = PageInfo<void>(name);
 }
 
 /// generated route for

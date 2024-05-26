@@ -23,7 +23,7 @@ class _Exercise2Page1State extends State<Exercise2Page1> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text(Constants.exercise1Title)),
+      appBar: AppBar(title: const Text(Constants.exercise2Title)),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
@@ -68,7 +68,7 @@ class _Exercise2Page2State extends State<Exercise2Page2> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text(Constants.exercise1Title)),
+      appBar: AppBar(title: const Text(Constants.exercise2Title)),
       body: Center(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
