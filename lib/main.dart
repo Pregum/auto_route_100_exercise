@@ -59,6 +59,9 @@ class _MyHomePageState extends State<MyHomePage> {
             _buildExercise1Button(context, Constants.exercise1Title, () {
               _navigateToExercise1(const Exercise1Route1());
             }),
+            _buildExercise1Button(context, Constants.exercise2Title, () {
+              _navigateToExercise1(const Exercise2Route1());
+            }),
           ],
         ),
       ),

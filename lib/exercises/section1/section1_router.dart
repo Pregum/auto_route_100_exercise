@@ -1,5 +1,6 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:auto_route_100_exercise/exercises/section1/exercise1.dart';
+import 'package:auto_route_100_exercise/exercises/section1/exercise2.dart';
 import 'package:auto_route_100_exercise/main.dart';
 import 'package:flutter/material.dart';
 
@@ -11,7 +12,9 @@ class Section1Router extends _$Section1Router {
   List<AutoRoute> get routes {
     return [
       AutoRoute(page: Exercise1Route1.page),
-      AutoRoute(page:Exercise1Route2.page),
+      AutoRoute(page: Exercise1Route2.page),
+      AutoRoute(page: Exercise2Route1.page),
+      AutoRoute(page: Exercise2Route2.page),
     ];
   }
 }
