@@ -1,4 +1,5 @@
 import 'package:auto_route/auto_route.dart';
+import 'package:auto_route_100_exercise/constants.dart';
 import 'package:auto_route_100_exercise/main_router.dart';
 import 'package:flutter/material.dart';
 
@@ -48,22 +49,36 @@ class _MyHomePageState extends State<MyHomePage> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-        // title: Text(''),
+        title: const Text('Flutter auto_route 100 Exercises'),
       ),
-      body: Center(
+      body: SingleChildScrollView(
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget>[
-            ElevatedButton(
-              child: Text(
-                'Exercise1',
-                style: Theme.of(context).textTheme.headlineMedium,
-              ),
-              onPressed: () {
-                context.pushRoute(const Exercise1Route1());
-              },
-            ),
+            _buildExercise1Button(context, Constants.exercise1Title, () {
+              _navigateToExercise1(const Exercise1Route1());
+            }),
           ],
+        ),
+      ),
+    );
+  }
+
+  void _navigateToExercise1(PageRouteInfo<dynamic> route) {
+    context.pushRoute(route);
+  }
+
+  Widget _buildExercise1Button(
+      BuildContext context, String content, VoidCallback onPressed) {
+    return Container(
+      alignment: Alignment.center,
+      margin: const EdgeInsets.symmetric(vertical: 16),
+      child: ElevatedButton(
+        onPressed: onPressed,
+        child: Text(
+          content,
+          style: Theme.of(context).textTheme.headlineSmall,
         ),
       ),
     );

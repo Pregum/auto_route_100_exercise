@@ -11,6 +11,7 @@ class Section1Router extends _$Section1Router {
   List<AutoRoute> get routes {
     return [
       AutoRoute(page: Exercise1Route1.page),
+      AutoRoute(page:Exercise1Route2.page),
     ];
   }
 }

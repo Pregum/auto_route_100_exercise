@@ -21,6 +21,12 @@ abstract class _$MainRouter extends RootStackRouter {
         child: const Exercise1Page1(),
       );
     },
+    Exercise1Route2.name: (routeData) {
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const Exercise1Page2(),
+      );
+    },
     MyHomeRoute.name: (routeData) {
       return AutoRoutePage<dynamic>(
         routeData: routeData,
@@ -40,6 +46,20 @@ class Exercise1Route1 extends PageRouteInfo<void> {
         );
 
   static const String name = 'Exercise1Route1';
+
+  static const PageInfo<void> page = PageInfo<void>(name);
+}
+
+/// generated route for
+/// [Exercise1Page2]
+class Exercise1Route2 extends PageRouteInfo<void> {
+  const Exercise1Route2({List<PageRouteInfo>? children})
+      : super(
+          Exercise1Route2.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'Exercise1Route2';
 
   static const PageInfo<void> page = PageInfo<void>(name);
 }
