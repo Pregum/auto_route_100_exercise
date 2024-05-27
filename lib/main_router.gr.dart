@@ -84,6 +84,18 @@ abstract class _$MainRouter extends RootStackRouter {
         child: const Exercise5Page2(),
       );
     },
+    Exercise6Route1.name: (routeData) {
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const Exercise6Page1(),
+      );
+    },
+    Exercise6Route2.name: (routeData) {
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const Exercise6Page2(),
+      );
+    },
     MyHomeRoute.name: (routeData) {
       return AutoRoutePage<dynamic>(
         routeData: routeData,
@@ -282,6 +294,34 @@ class Exercise5Route2 extends PageRouteInfo<void> {
         );
 
   static const String name = 'Exercise5Route2';
+
+  static const PageInfo<void> page = PageInfo<void>(name);
+}
+
+/// generated route for
+/// [Exercise6Page1]
+class Exercise6Route1 extends PageRouteInfo<void> {
+  const Exercise6Route1({List<PageRouteInfo>? children})
+      : super(
+          Exercise6Route1.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'Exercise6Route1';
+
+  static const PageInfo<void> page = PageInfo<void>(name);
+}
+
+/// generated route for
+/// [Exercise6Page2]
+class Exercise6Route2 extends PageRouteInfo<void> {
+  const Exercise6Route2({List<PageRouteInfo>? children})
+      : super(
+          Exercise6Route2.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'Exercise6Route2';
 
   static const PageInfo<void> page = PageInfo<void>(name);
 }
