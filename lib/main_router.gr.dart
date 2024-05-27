@@ -68,7 +68,20 @@ abstract class _$MainRouter extends RootStackRouter {
         child: Exercise4Page2(
           key: args.key,
           planeData: args.planeData,
+          onTapClearButton: args.onTapClearButton,
         ),
+      );
+    },
+    Exercise5Route1.name: (routeData) {
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const Exercise5Page1(),
+      );
+    },
+    Exercise5Route2.name: (routeData) {
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const Exercise5Page2(),
       );
     },
     MyHomeRoute.name: (routeData) {
@@ -208,12 +221,14 @@ class Exercise4Route2 extends PageRouteInfo<Exercise4Route2Args> {
   Exercise4Route2({
     Key? key,
     required Exercise4PlaneData planeData,
+    void Function()? onTapClearButton,
     List<PageRouteInfo>? children,
   }) : super(
           Exercise4Route2.name,
           args: Exercise4Route2Args(
             key: key,
             planeData: planeData,
+            onTapClearButton: onTapClearButton,
           ),
           initialChildren: children,
         );
@@ -228,16 +243,47 @@ class Exercise4Route2Args {
   const Exercise4Route2Args({
     this.key,
     required this.planeData,
+    this.onTapClearButton,
   });
 
   final Key? key;
 
   final Exercise4PlaneData planeData;
 
+  final void Function()? onTapClearButton;
+
   @override
   String toString() {
-    return 'Exercise4Route2Args{key: $key, planeData: $planeData}';
+    return 'Exercise4Route2Args{key: $key, planeData: $planeData, onTapClearButton: $onTapClearButton}';
   }
+}
+
+/// generated route for
+/// [Exercise5Page1]
+class Exercise5Route1 extends PageRouteInfo<void> {
+  const Exercise5Route1({List<PageRouteInfo>? children})
+      : super(
+          Exercise5Route1.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'Exercise5Route1';
+
+  static const PageInfo<void> page = PageInfo<void>(name);
+}
+
+/// generated route for
+/// [Exercise5Page2]
+class Exercise5Route2 extends PageRouteInfo<void> {
+  const Exercise5Route2({List<PageRouteInfo>? children})
+      : super(
+          Exercise5Route2.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'Exercise5Route2';
+
+  static const PageInfo<void> page = PageInfo<void>(name);
 }
 
 /// generated route for
