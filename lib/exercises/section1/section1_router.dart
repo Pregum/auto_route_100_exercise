@@ -1,5 +1,4 @@
 import 'package:auto_route/auto_route.dart';
-import 'package:auto_route_100_exercise/exercises/section1/exercise6.dart';
 import 'package:auto_route_100_exercise/main_router.dart';
 import 'package:flutter/material.dart';
 
@@ -20,7 +19,17 @@ final List<AutoRoute> section1Routes = [
     transitionsBuilder: (context, animation, secondaryAnimation, child) =>
         _fadeInOutTransitionBuilder(
             context, animation, secondaryAnimation, child),
-  )
+  ),
+  // 遷移元のページをAutoRouteを使うと、遷移先ページへ遷移する際にAutoRouteのアニメーションが適用される為、
+  // 遷移先のアニメーションだけ適用させたい場合は遷移元のページでもCustomRouteを使う
+  CustomRoute(
+    page: Exercise7Route1.page,
+    transitionsBuilder: TransitionsBuilders.fadeIn,
+  ),
+  CustomRoute(
+    page: Exercise7Route2.page,
+    transitionsBuilder: _fadeInOutTransitionBuilder,
+  ),
 ];
 
 Widget _fadeInOutTransitionBuilder(

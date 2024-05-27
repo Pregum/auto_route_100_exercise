@@ -5,6 +5,7 @@ import 'package:auto_route_100_exercise/exercises/section1/exercise3.dart';
 import 'package:auto_route_100_exercise/exercises/section1/exercise4.dart';
 import 'package:auto_route_100_exercise/exercises/section1/exercise5.dart';
 import 'package:auto_route_100_exercise/exercises/section1/exercise6.dart';
+import 'package:auto_route_100_exercise/exercises/section1/exercise7.dart';
 import 'package:auto_route_100_exercise/exercises/section1/section1_router.dart';
 import 'package:auto_route_100_exercise/main.dart';
 import 'package:flutter/material.dart';
