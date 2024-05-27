@@ -55,6 +55,22 @@ abstract class _$MainRouter extends RootStackRouter {
         child: const Exercise3Page2(),
       );
     },
+    Exercise4Route1.name: (routeData) {
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const Exercise4Page1(),
+      );
+    },
+    Exercise4Route2.name: (routeData) {
+      final args = routeData.argsAs<Exercise4Route2Args>();
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: Exercise4Page2(
+          key: args.key,
+          planeData: args.planeData,
+        ),
+      );
+    },
     MyHomeRoute.name: (routeData) {
       return AutoRoutePage<dynamic>(
         routeData: routeData,
@@ -170,6 +186,58 @@ class Exercise3Route2 extends PageRouteInfo<void> {
   static const String name = 'Exercise3Route2';
 
   static const PageInfo<void> page = PageInfo<void>(name);
+}
+
+/// generated route for
+/// [Exercise4Page1]
+class Exercise4Route1 extends PageRouteInfo<void> {
+  const Exercise4Route1({List<PageRouteInfo>? children})
+      : super(
+          Exercise4Route1.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'Exercise4Route1';
+
+  static const PageInfo<void> page = PageInfo<void>(name);
+}
+
+/// generated route for
+/// [Exercise4Page2]
+class Exercise4Route2 extends PageRouteInfo<Exercise4Route2Args> {
+  Exercise4Route2({
+    Key? key,
+    required Exercise4PlaneData planeData,
+    List<PageRouteInfo>? children,
+  }) : super(
+          Exercise4Route2.name,
+          args: Exercise4Route2Args(
+            key: key,
+            planeData: planeData,
+          ),
+          initialChildren: children,
+        );
+
+  static const String name = 'Exercise4Route2';
+
+  static const PageInfo<Exercise4Route2Args> page =
+      PageInfo<Exercise4Route2Args>(name);
+}
+
+class Exercise4Route2Args {
+  const Exercise4Route2Args({
+    this.key,
+    required this.planeData,
+  });
+
+  final Key? key;
+
+  final Exercise4PlaneData planeData;
+
+  @override
+  String toString() {
+    return 'Exercise4Route2Args{key: $key, planeData: $planeData}';
+  }
 }
 
 /// generated route for

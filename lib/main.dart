@@ -66,7 +66,7 @@ class _MyHomePageState extends State<MyHomePage> {
               _navigateToExercise(const Exercise3Route1());
             }),
             _buildExerciseButton(context, Constants.exercise4Title, () {
-              _navigateToExercise(const Exercise3Route1());
+              _navigateToExercise(const Exercise4Route1());
             }),
           ],
         ),
