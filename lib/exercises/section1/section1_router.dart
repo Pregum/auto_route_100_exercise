@@ -30,6 +30,26 @@ final List<AutoRoute> section1Routes = [
     page: Exercise7Route2.page,
     transitionsBuilder: _fadeInOutTransitionBuilder,
   ),
+  CustomRoute(
+    page: Exercise8Route1.page,
+    transitionsBuilder: TransitionsBuilders.fadeIn,
+  ),
+  CustomRoute(
+    page: Exercise8Route2.page,
+    transitionsBuilder: TransitionsBuilders.slideLeft,
+  ),
+  CustomRoute(
+    page: Exercise8Route3.page,
+    transitionsBuilder: TransitionsBuilders.slideTop,
+  ),
+  CustomRoute(
+    page: Exercise8Route4.page,
+    transitionsBuilder: TransitionsBuilders.slideRight,
+  ),
+  CustomRoute(
+    page: Exercise8Route5.page,
+    transitionsBuilder: TransitionsBuilders.slideBottom,
+  ),
 ];
 
 Widget _fadeInOutTransitionBuilder(

@@ -108,6 +108,36 @@ abstract class _$MainRouter extends RootStackRouter {
         child: const Exercise7Page2(),
       );
     },
+    Exercise8Route1.name: (routeData) {
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const Exercise8Page1(),
+      );
+    },
+    Exercise8Route2.name: (routeData) {
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const Exercise8Page2(),
+      );
+    },
+    Exercise8Route3.name: (routeData) {
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const Exercise8Page3(),
+      );
+    },
+    Exercise8Route4.name: (routeData) {
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const Exercise8Page4(),
+      );
+    },
+    Exercise8Route5.name: (routeData) {
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const Exercise8Page5(),
+      );
+    },
     MyHomeRoute.name: (routeData) {
       return AutoRoutePage<dynamic>(
         routeData: routeData,
@@ -362,6 +392,76 @@ class Exercise7Route2 extends PageRouteInfo<void> {
         );
 
   static const String name = 'Exercise7Route2';
+
+  static const PageInfo<void> page = PageInfo<void>(name);
+}
+
+/// generated route for
+/// [Exercise8Page1]
+class Exercise8Route1 extends PageRouteInfo<void> {
+  const Exercise8Route1({List<PageRouteInfo>? children})
+      : super(
+          Exercise8Route1.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'Exercise8Route1';
+
+  static const PageInfo<void> page = PageInfo<void>(name);
+}
+
+/// generated route for
+/// [Exercise8Page2]
+class Exercise8Route2 extends PageRouteInfo<void> {
+  const Exercise8Route2({List<PageRouteInfo>? children})
+      : super(
+          Exercise8Route2.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'Exercise8Route2';
+
+  static const PageInfo<void> page = PageInfo<void>(name);
+}
+
+/// generated route for
+/// [Exercise8Page3]
+class Exercise8Route3 extends PageRouteInfo<void> {
+  const Exercise8Route3({List<PageRouteInfo>? children})
+      : super(
+          Exercise8Route3.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'Exercise8Route3';
+
+  static const PageInfo<void> page = PageInfo<void>(name);
+}
+
+/// generated route for
+/// [Exercise8Page4]
+class Exercise8Route4 extends PageRouteInfo<void> {
+  const Exercise8Route4({List<PageRouteInfo>? children})
+      : super(
+          Exercise8Route4.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'Exercise8Route4';
+
+  static const PageInfo<void> page = PageInfo<void>(name);
+}
+
+/// generated route for
+/// [Exercise8Page5]
+class Exercise8Route5 extends PageRouteInfo<void> {
+  const Exercise8Route5({List<PageRouteInfo>? children})
+      : super(
+          Exercise8Route5.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'Exercise8Route5';
 
   static const PageInfo<void> page = PageInfo<void>(name);
 }
