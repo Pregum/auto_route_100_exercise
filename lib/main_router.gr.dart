@@ -15,6 +15,18 @@ abstract class _$MainRouter extends RootStackRouter {
 
   @override
   final Map<String, PageFactory> pagesMap = {
+    Exercise10Route1.name: (routeData) {
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const Exercise10Page1(),
+      );
+    },
+    Exercise10Route2.name: (routeData) {
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const Exercise10Page2(),
+      );
+    },
     Exercise1Route1.name: (routeData) {
       return AutoRoutePage<dynamic>(
         routeData: routeData,
@@ -157,6 +169,34 @@ abstract class _$MainRouter extends RootStackRouter {
       );
     },
   };
+}
+
+/// generated route for
+/// [Exercise10Page1]
+class Exercise10Route1 extends PageRouteInfo<void> {
+  const Exercise10Route1({List<PageRouteInfo>? children})
+      : super(
+          Exercise10Route1.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'Exercise10Route1';
+
+  static const PageInfo<void> page = PageInfo<void>(name);
+}
+
+/// generated route for
+/// [Exercise10Page2]
+class Exercise10Route2 extends PageRouteInfo<void> {
+  const Exercise10Route2({List<PageRouteInfo>? children})
+      : super(
+          Exercise10Route2.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'Exercise10Route2';
+
+  static const PageInfo<void> page = PageInfo<void>(name);
 }
 
 /// generated route for

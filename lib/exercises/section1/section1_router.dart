@@ -58,6 +58,14 @@ final List<AutoRoute> section1Routes = [
     page: Exercise9Route2.page,
     transitionsBuilder: _rotateTransitionBuilder,
   ),
+  CustomRoute(
+    page: Exercise10Route1.page,
+    transitionsBuilder: TransitionsBuilders.fadeIn,
+  ),
+  CustomRoute(
+    page: Exercise10Route2.page,
+    transitionsBuilder: TransitionsBuilders.zoomIn,
+  ),
 ];
 
 Widget _fadeInOutTransitionBuilder(
