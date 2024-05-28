@@ -50,6 +50,14 @@ final List<AutoRoute> section1Routes = [
     page: Exercise8Route5.page,
     transitionsBuilder: TransitionsBuilders.slideBottom,
   ),
+  CustomRoute(
+    page: Exercise9Route1.page,
+    transitionsBuilder: TransitionsBuilders.fadeIn,
+  ),
+  CustomRoute(
+    page: Exercise9Route2.page,
+    transitionsBuilder: _rotateTransitionBuilder,
+  ),
 ];
 
 Widget _fadeInOutTransitionBuilder(
@@ -64,5 +72,20 @@ Widget _fadeInOutTransitionBuilder(
         opacity:
             Tween<double>(begin: 1.0, end: 0.0).animate(secondaryAnimation),
         child: child),
+  );
+}
+
+Widget _rotateTransitionBuilder(
+  BuildContext context,
+  Animation<double> animation,
+  Animation<double> secondaryAnimation,
+  Widget child,
+) {
+  return RotationTransition(
+    turns: animation,
+    child: RotationTransition(
+      turns: Tween<double>(begin: 1.0, end: 0.0).animate(secondaryAnimation),
+      child: child,
+    ),
   );
 }
