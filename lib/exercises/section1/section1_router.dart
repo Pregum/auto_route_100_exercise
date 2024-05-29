@@ -66,7 +66,62 @@ final List<AutoRoute> section1Routes = [
     page: Exercise10Route2.page,
     transitionsBuilder: TransitionsBuilders.zoomIn,
   ),
+  CustomRoute(
+    page: Exercise11Route1.page,
+    transitionsBuilder: TransitionsBuilders.zoomIn,
+  ),
+  CustomRoute(
+    page: Exercise11Route2.page,
+    transitionsBuilder: _glitchTransitionBuilder,
+  ),
 ];
+
+Widget _glitchTransitionBuilder(
+  BuildContext context,
+  Animation<double> animation,
+  Animation<double> secondaryAnimation,
+  Widget child,
+) {
+  return Stack(
+    children: [
+      child,
+      Positioned.fill(
+        child: AnimatedBuilder(
+          animation: animation,
+          builder: (context, child) {
+            final glitch = _glitchEffect(animation.value, animation.status);
+            return ClipRect(
+              child: Transform.translate(
+                offset: Offset(glitch, 0),
+                // offset: Offset(glitch, glitch),
+                child: child,
+              ),
+            );
+          },
+          child: child,
+        ),
+      ),
+    ],
+  );
+}
+
+double _glitchEffect(double value, AnimationStatus status) {
+  if (status == AnimationStatus.completed) {
+    return 0.0;
+  }
+  const noise = 100.0;
+  if (value < 0.2) {
+    return value * noise;
+  } else if (value < 0.4) {
+    return (0.4 - value) * noise;
+  } else if (value < 0.6) {
+    return (value - 0.4) * noise;
+  } else if (value < 0.8) {
+    return (0.8 - value) * noise;
+  } else {
+    return (value - 0.8) * noise;
+  }
+}
 
 Widget _fadeInOutTransitionBuilder(
   BuildContext context,
