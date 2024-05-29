@@ -39,6 +39,24 @@ abstract class _$MainRouter extends RootStackRouter {
         child: const Exercise11Page2(),
       );
     },
+    Exercise12DialogRoute.name: (routeData) {
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const Exercise12DialogPage(),
+      );
+    },
+    Exercise12Route1.name: (routeData) {
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const Exercise12Page1(),
+      );
+    },
+    Exercise12Route2.name: (routeData) {
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const Exercise12Page2(),
+      );
+    },
     Exercise1Route1.name: (routeData) {
       return AutoRoutePage<dynamic>(
         routeData: routeData,
@@ -235,6 +253,48 @@ class Exercise11Route2 extends PageRouteInfo<void> {
         );
 
   static const String name = 'Exercise11Route2';
+
+  static const PageInfo<void> page = PageInfo<void>(name);
+}
+
+/// generated route for
+/// [Exercise12DialogPage]
+class Exercise12DialogRoute extends PageRouteInfo<void> {
+  const Exercise12DialogRoute({List<PageRouteInfo>? children})
+      : super(
+          Exercise12DialogRoute.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'Exercise12DialogRoute';
+
+  static const PageInfo<void> page = PageInfo<void>(name);
+}
+
+/// generated route for
+/// [Exercise12Page1]
+class Exercise12Route1 extends PageRouteInfo<void> {
+  const Exercise12Route1({List<PageRouteInfo>? children})
+      : super(
+          Exercise12Route1.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'Exercise12Route1';
+
+  static const PageInfo<void> page = PageInfo<void>(name);
+}
+
+/// generated route for
+/// [Exercise12Page2]
+class Exercise12Route2 extends PageRouteInfo<void> {
+  const Exercise12Route2({List<PageRouteInfo>? children})
+      : super(
+          Exercise12Route2.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'Exercise12Route2';
 
   static const PageInfo<void> page = PageInfo<void>(name);
 }
