@@ -56,42 +56,56 @@ class _MyHomePageState extends State<MyHomePage> {
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget>[
-            _buildExerciseButton(context, Constants.exercise1Title, () {
-              _navigateToExercise(const Exercise1Route1());
-            }),
-            _buildExerciseButton(context, Constants.exercise2Title, () {
-              _navigateToExercise(const Exercise2Route1());
-            }),
-            _buildExerciseButton(context, Constants.exercise3Title, () {
-              _navigateToExercise(const Exercise3Route1());
-            }),
-            _buildExerciseButton(context, Constants.exercise4Title, () {
-              _navigateToExercise(const Exercise4Route1());
-            }),
-            _buildExerciseButton(context, Constants.exercise5Title, () {
-              _navigateToExercise(const Exercise5Route1());
-            }),
-            _buildExerciseButton(context, Constants.exercise6Title, () {
-              _navigateToExercise(const Exercise6Route1());
-            }),
-            _buildExerciseButton(context, Constants.exercise7Title, () {
-              _navigateToExercise(const Exercise7Route1());
-            }),
-            _buildExerciseButton(context, Constants.exercise8Title, () {
-              _navigateToExercise(const Exercise8Route1());
-            }),
-            _buildExerciseButton(context, Constants.exercise9Title, () {
-              _navigateToExercise(const Exercise9Route1());
-            }),
-            _buildExerciseButton(context, Constants.exercise10Title, () {
-              _navigateToExercise(const Exercise10Route1());
-            }),
-            _buildExerciseButton(context, Constants.exercise11Title, () {
-              _navigateToExercise(const Exercise11Route1());
-            }),
-            _buildExerciseButton(context, Constants.exercise12Title, () {
-              _navigateToExercise(const Exercise12Route1());
-            }),
+            ExpansionTile(
+              title: const Text('section1'),
+              children: [
+                _buildExerciseButton(context, Constants.exercise1Title, () {
+                  _navigateToExercise(const Exercise1Route1());
+                }),
+                _buildExerciseButton(context, Constants.exercise2Title, () {
+                  _navigateToExercise(const Exercise2Route1());
+                }),
+                _buildExerciseButton(context, Constants.exercise3Title, () {
+                  _navigateToExercise(const Exercise3Route1());
+                }),
+                _buildExerciseButton(context, Constants.exercise4Title, () {
+                  _navigateToExercise(const Exercise4Route1());
+                }),
+                _buildExerciseButton(context, Constants.exercise5Title, () {
+                  _navigateToExercise(const Exercise5Route1());
+                }),
+                _buildExerciseButton(context, Constants.exercise6Title, () {
+                  _navigateToExercise(const Exercise6Route1());
+                }),
+                _buildExerciseButton(context, Constants.exercise7Title, () {
+                  _navigateToExercise(const Exercise7Route1());
+                }),
+                _buildExerciseButton(context, Constants.exercise8Title, () {
+                  _navigateToExercise(const Exercise8Route1());
+                }),
+                _buildExerciseButton(context, Constants.exercise9Title, () {
+                  _navigateToExercise(const Exercise9Route1());
+                }),
+                _buildExerciseButton(context, Constants.exercise10Title, () {
+                  _navigateToExercise(const Exercise10Route1());
+                }),
+                _buildExerciseButton(context, Constants.exercise11Title, () {
+                  _navigateToExercise(const Exercise11Route1());
+                }),
+              ],
+            ),
+            ExpansionTile(
+              title: const Text('section2'),
+              initiallyExpanded: true, // TODO: 新しいセクションを追加したら差し替える
+              children: [
+                _buildExerciseButton(context, Constants.exercise12Title, () {
+                  _navigateToExercise(const Exercise12Route1());
+                }),
+                _buildExerciseButton(context, Constants.exercise13Title, () {
+                  // _navigateToExercise(const Exercise13Route1());
+                }),
+              ],
+            ),
           ],
         ),
       ),
