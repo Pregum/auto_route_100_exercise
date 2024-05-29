@@ -72,11 +72,11 @@ final List<AutoRoute> section1Routes = [
   ),
   CustomRoute(
     page: Exercise11Route2.page,
-    transitionsBuilder: _glitchTransitionBuilder,
+    transitionsBuilder: _shakeTransitionBuilder,
   ),
 ];
 
-Widget _glitchTransitionBuilder(
+Widget _shakeTransitionBuilder(
   BuildContext context,
   Animation<double> animation,
   Animation<double> secondaryAnimation,
@@ -89,7 +89,7 @@ Widget _glitchTransitionBuilder(
         child: AnimatedBuilder(
           animation: animation,
           builder: (context, child) {
-            final glitch = _glitchEffect(animation.value, animation.status);
+            final glitch = _shakeEffect(animation.value, animation.status);
             return ClipRect(
               child: Transform.translate(
                 offset: Offset(glitch, 0),
@@ -105,7 +105,7 @@ Widget _glitchTransitionBuilder(
   );
 }
 
-double _glitchEffect(double value, AnimationStatus status) {
+double _shakeEffect(double value, AnimationStatus status) {
   if (status == AnimationStatus.completed) {
     return 0.0;
   }
