@@ -11,4 +11,6 @@ final List<AutoRoute> section2Routes = [
   AutoRoute(page: Exercise13Route1.page),
   AutoRoute(page: Exercise13Route2.page),
   AutoRoute(page: Exercise14Route1.page),
+  AutoRoute(page: Exercise15Route1.page),
+  AutoRoute(page: Exercise15Route2.page),
 ];

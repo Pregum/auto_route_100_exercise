@@ -87,6 +87,26 @@ abstract class _$MainRouter extends RootStackRouter {
         ),
       );
     },
+    Exercise15Route1.name: (routeData) {
+      final args = routeData.argsAs<Exercise15Route1Args>();
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: Exercise15Page1(
+          key: args.key,
+          title: args.title,
+        ),
+      );
+    },
+    Exercise15Route2.name: (routeData) {
+      final args = routeData.argsAs<Exercise15Route2Args>();
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: Exercise15Page2(
+          key: args.key,
+          title: args.title,
+        ),
+      );
+    },
     Exercise1Route1.name: (routeData) {
       return AutoRoutePage<dynamic>(
         routeData: routeData,
@@ -440,6 +460,82 @@ class Exercise14Route1Args {
   @override
   String toString() {
     return 'Exercise14Route1Args{key: $key, title: $title}';
+  }
+}
+
+/// generated route for
+/// [Exercise15Page1]
+class Exercise15Route1 extends PageRouteInfo<Exercise15Route1Args> {
+  Exercise15Route1({
+    Key? key,
+    required String title,
+    List<PageRouteInfo>? children,
+  }) : super(
+          Exercise15Route1.name,
+          args: Exercise15Route1Args(
+            key: key,
+            title: title,
+          ),
+          initialChildren: children,
+        );
+
+  static const String name = 'Exercise15Route1';
+
+  static const PageInfo<Exercise15Route1Args> page =
+      PageInfo<Exercise15Route1Args>(name);
+}
+
+class Exercise15Route1Args {
+  const Exercise15Route1Args({
+    this.key,
+    required this.title,
+  });
+
+  final Key? key;
+
+  final String title;
+
+  @override
+  String toString() {
+    return 'Exercise15Route1Args{key: $key, title: $title}';
+  }
+}
+
+/// generated route for
+/// [Exercise15Page2]
+class Exercise15Route2 extends PageRouteInfo<Exercise15Route2Args> {
+  Exercise15Route2({
+    Key? key,
+    required String title,
+    List<PageRouteInfo>? children,
+  }) : super(
+          Exercise15Route2.name,
+          args: Exercise15Route2Args(
+            key: key,
+            title: title,
+          ),
+          initialChildren: children,
+        );
+
+  static const String name = 'Exercise15Route2';
+
+  static const PageInfo<Exercise15Route2Args> page =
+      PageInfo<Exercise15Route2Args>(name);
+}
+
+class Exercise15Route2Args {
+  const Exercise15Route2Args({
+    this.key,
+    required this.title,
+  });
+
+  final Key? key;
+
+  final String title;
+
+  @override
+  String toString() {
+    return 'Exercise15Route2Args{key: $key, title: $title}';
   }
 }
 
