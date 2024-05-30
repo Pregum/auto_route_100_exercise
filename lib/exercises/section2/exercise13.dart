@@ -1,5 +1,4 @@
 import 'package:auto_route/auto_route.dart';
-import 'package:auto_route_100_exercise/constants.dart';
 import 'package:auto_route_100_exercise/main_router.dart';
 import 'package:flutter/material.dart';
 
@@ -91,21 +90,6 @@ class Exercise13DialogPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // iOS・Webだと[CupertinoAlertDialog] が呼ばれる
-    // Androidの場合は[AlertDialog] が呼ばれる
-    // return Dialog(
-    // title: const Text('Dialog Title'),
-    // content: const Text('This is the content of the dialog.'),
-    // actions: <Widget>[
-    //   TextButton(
-    //     onPressed: () {
-    //       context.maybePop('hello');
-    //     },
-    //     child: const Text('Close'),
-    //   ),
-    // ],
-    // );
-
     return Dialog(
       child: Container(
         padding: const EdgeInsets.all(20),
