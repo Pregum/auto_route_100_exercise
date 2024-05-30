@@ -8,5 +8,6 @@ final List<AutoRoute> section2Routes = [
     page: Exercise12DialogRoute.page,
     transitionsBuilder: TransitionsBuilders.fadeIn,
   ),
-  // CustomRoute(page: Exercise13Route1.page),
+  AutoRoute(page: Exercise13Route1.page),
+  AutoRoute(page: Exercise13Route2.page),
 ];
