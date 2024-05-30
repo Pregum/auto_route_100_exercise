@@ -35,8 +35,9 @@ class Exercise14Page1 extends StatelessWidget {
   _showDialog(BuildContext context) async {
     return await showDialog(
       context: context,
+      barrierDismissible: false,
       builder: (context) {
-        return ShakeDialog();
+        return const ShakeDialog();
       },
     );
   }
@@ -61,9 +62,9 @@ class _ShakeDialogState extends State<ShakeDialog>
       duration: const Duration(milliseconds: 500),
       vsync: this,
     );
-    _animation = Tween<double>(begin: 0, end: 10)
+    _animation = Tween<double>(begin: -300, end: 300)
         .chain(
-          CurveTween(curve: Curves.elasticIn),
+          CurveTween(curve: Curves.easeInOut),
         )
         .animate(_controller)
       ..addStatusListener((status) {
