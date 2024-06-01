@@ -117,6 +117,26 @@ abstract class _$MainRouter extends RootStackRouter {
         ),
       );
     },
+    Exercise17Route1.name: (routeData) {
+      final args = routeData.argsAs<Exercise17Route1Args>();
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: Exercise17Page1(
+          key: args.key,
+          title: args.title,
+        ),
+      );
+    },
+    Exercise17Route2.name: (routeData) {
+      final args = routeData.argsAs<Exercise17Route2Args>();
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: Exercise17Page2(
+          key: args.key,
+          title: args.title,
+        ),
+      );
+    },
     Exercise1Route1.name: (routeData) {
       return AutoRoutePage<dynamic>(
         routeData: routeData,
@@ -584,6 +604,82 @@ class Exercise16Route1Args {
   @override
   String toString() {
     return 'Exercise16Route1Args{key: $key, title: $title}';
+  }
+}
+
+/// generated route for
+/// [Exercise17Page1]
+class Exercise17Route1 extends PageRouteInfo<Exercise17Route1Args> {
+  Exercise17Route1({
+    Key? key,
+    required String title,
+    List<PageRouteInfo>? children,
+  }) : super(
+          Exercise17Route1.name,
+          args: Exercise17Route1Args(
+            key: key,
+            title: title,
+          ),
+          initialChildren: children,
+        );
+
+  static const String name = 'Exercise17Route1';
+
+  static const PageInfo<Exercise17Route1Args> page =
+      PageInfo<Exercise17Route1Args>(name);
+}
+
+class Exercise17Route1Args {
+  const Exercise17Route1Args({
+    this.key,
+    required this.title,
+  });
+
+  final Key? key;
+
+  final String title;
+
+  @override
+  String toString() {
+    return 'Exercise17Route1Args{key: $key, title: $title}';
+  }
+}
+
+/// generated route for
+/// [Exercise17Page2]
+class Exercise17Route2 extends PageRouteInfo<Exercise17Route2Args> {
+  Exercise17Route2({
+    Key? key,
+    required String title,
+    List<PageRouteInfo>? children,
+  }) : super(
+          Exercise17Route2.name,
+          args: Exercise17Route2Args(
+            key: key,
+            title: title,
+          ),
+          initialChildren: children,
+        );
+
+  static const String name = 'Exercise17Route2';
+
+  static const PageInfo<Exercise17Route2Args> page =
+      PageInfo<Exercise17Route2Args>(name);
+}
+
+class Exercise17Route2Args {
+  const Exercise17Route2Args({
+    this.key,
+    required this.title,
+  });
+
+  final Key? key;
+
+  final String title;
+
+  @override
+  String toString() {
+    return 'Exercise17Route2Args{key: $key, title: $title}';
   }
 }
 

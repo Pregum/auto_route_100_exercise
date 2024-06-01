@@ -122,7 +122,15 @@ class _MyHomePageState extends State<MyHomePage> {
                   Constants.exercise16Title,
                   () {
                     _navigateToExercise(
-                    Exercise16Route1(title: Constants.exercise16Title));
+                        Exercise16Route1(title: Constants.exercise16Title));
+                  },
+                ),
+                _buildExerciseButton(
+                  context,
+                  Constants.exercise17Title,
+                  () {
+                    _navigateToExercise(
+                        Exercise17Route1(title: Constants.exercise17Title));
                   },
                 ),
               ],
