@@ -107,6 +107,16 @@ abstract class _$MainRouter extends RootStackRouter {
         ),
       );
     },
+    Exercise16Route1.name: (routeData) {
+      final args = routeData.argsAs<Exercise16Route1Args>();
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: Exercise16Page1(
+          key: args.key,
+          title: args.title,
+        ),
+      );
+    },
     Exercise1Route1.name: (routeData) {
       return AutoRoutePage<dynamic>(
         routeData: routeData,
@@ -536,6 +546,44 @@ class Exercise15Route2Args {
   @override
   String toString() {
     return 'Exercise15Route2Args{key: $key, title: $title}';
+  }
+}
+
+/// generated route for
+/// [Exercise16Page1]
+class Exercise16Route1 extends PageRouteInfo<Exercise16Route1Args> {
+  Exercise16Route1({
+    Key? key,
+    required String title,
+    List<PageRouteInfo>? children,
+  }) : super(
+          Exercise16Route1.name,
+          args: Exercise16Route1Args(
+            key: key,
+            title: title,
+          ),
+          initialChildren: children,
+        );
+
+  static const String name = 'Exercise16Route1';
+
+  static const PageInfo<Exercise16Route1Args> page =
+      PageInfo<Exercise16Route1Args>(name);
+}
+
+class Exercise16Route1Args {
+  const Exercise16Route1Args({
+    this.key,
+    required this.title,
+  });
+
+  final Key? key;
+
+  final String title;
+
+  @override
+  String toString() {
+    return 'Exercise16Route1Args{key: $key, title: $title}';
   }
 }
 
