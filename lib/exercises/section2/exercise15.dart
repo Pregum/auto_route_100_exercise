@@ -97,17 +97,6 @@ class Exercise15DialogPage extends StatelessWidget {
               },
               child: const Text('close dialog and Go to Route 2'),
             ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.end,
-              children: [
-                TextButton(
-                  onPressed: () {
-                    context.maybePop();
-                  },
-                  child: const Text('Send your name'),
-                ),
-              ],
-            )
           ],
         ),
       ),
