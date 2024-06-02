@@ -20,11 +20,22 @@ import 'package:auto_route_100_exercise/exercises/section2/exercise17.dart';
 import 'package:auto_route_100_exercise/exercises/section2/section2_router.dart';
 import 'package:auto_route_100_exercise/main.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 part 'main_router.gr.dart';
 
 @AutoRouterConfig(replaceInRouteName: 'Page,Route')
+/// The main router class for the application.
+/// This class extends the generated [_$MainRouter] class.
+/// It defines the routes for the application using the [AutoRoute] class.
+/// The [MainRouter] class requires a [Ref] object as a parameter in its constructor.
 class MainRouter extends _$MainRouter {
+  final Ref _ref;
+
+  /// Constructs a new instance of the [MainRouter] class.
+  /// The `ref` parameter is used to initialize the [_ref] field.
+  MainRouter(this._ref);
+
   @override
   List<AutoRoute> get routes => [
         AutoRoute(
@@ -32,6 +43,6 @@ class MainRouter extends _$MainRouter {
           initial: true,
         ),
         ...section1Routes,
-        ...section2Routes,
+        ...section2Routes(_ref),
       ];
 }

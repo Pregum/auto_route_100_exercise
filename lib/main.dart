@@ -1,19 +1,22 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:auto_route_100_exercise/constants.dart';
 import 'package:auto_route_100_exercise/main_router.dart';
+import 'package:auto_route_100_exercise/provider/main_router_provider.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(const ProviderScope(child: MyApp()));
 }
 
-class MyApp extends StatelessWidget {
-  MyApp({super.key});
+class MyApp extends ConsumerWidget {
+  const MyApp({super.key});
 
-  final _mainRouter = MainRouter();
+  // final _mainRouter = MainRouter();
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
+    final mainRouter = ref.watch(mainRouterNotifierProvider);
     // return MaterialApp(
     //   title: 'Flutter auto_route 100 Exercises',
     //   theme: ThemeData(
@@ -29,7 +32,8 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      routerConfig: _mainRouter.config(),
+      // routerConfig: _mainRouter.config(),
+      routerConfig: mainRouter.config(),
       // home: const MyHomePage(title: 'Flutter auto_route 100 Exercises'),
     );
   }
@@ -131,6 +135,14 @@ class _MyHomePageState extends State<MyHomePage> {
                   () {
                     _navigateToExercise(
                         Exercise17Route1(title: Constants.exercise17Title));
+                  },
+                ),
+                _buildExerciseButton(
+                  context,
+                  Constants.exercise18Title,
+                  () {
+                    // _navigateToExercise(
+                    //     Exercise18Route1(title: Constants.exercise18Title));
                   },
                 ),
               ],
