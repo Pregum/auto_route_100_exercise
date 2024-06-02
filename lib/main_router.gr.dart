@@ -225,6 +225,22 @@ abstract class _$MainRouter extends RootStackRouter {
         child: const Exercise20RegistrationCompletePage(),
       );
     },
+    Exercise21ConfirmationRoute.name: (routeData) {
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const Exercise21ConfirmationPage(),
+      );
+    },
+    Exercise21Route1.name: (routeData) {
+      final args = routeData.argsAs<Exercise21Route1Args>();
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: Exercise21Page1(
+          key: args.key,
+          title: args.title,
+        ),
+      );
+    },
     Exercise2Route1.name: (routeData) {
       return AutoRoutePage<dynamic>(
         routeData: routeData,
@@ -1065,6 +1081,58 @@ class Exercise20RegistrationCompleteRoute extends PageRouteInfo<void> {
   static const String name = 'Exercise20RegistrationCompleteRoute';
 
   static const PageInfo<void> page = PageInfo<void>(name);
+}
+
+/// generated route for
+/// [Exercise21ConfirmationPage]
+class Exercise21ConfirmationRoute extends PageRouteInfo<void> {
+  const Exercise21ConfirmationRoute({List<PageRouteInfo>? children})
+      : super(
+          Exercise21ConfirmationRoute.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'Exercise21ConfirmationRoute';
+
+  static const PageInfo<void> page = PageInfo<void>(name);
+}
+
+/// generated route for
+/// [Exercise21Page1]
+class Exercise21Route1 extends PageRouteInfo<Exercise21Route1Args> {
+  Exercise21Route1({
+    Key? key,
+    required String title,
+    List<PageRouteInfo>? children,
+  }) : super(
+          Exercise21Route1.name,
+          args: Exercise21Route1Args(
+            key: key,
+            title: title,
+          ),
+          initialChildren: children,
+        );
+
+  static const String name = 'Exercise21Route1';
+
+  static const PageInfo<Exercise21Route1Args> page =
+      PageInfo<Exercise21Route1Args>(name);
+}
+
+class Exercise21Route1Args {
+  const Exercise21Route1Args({
+    this.key,
+    required this.title,
+  });
+
+  final Key? key;
+
+  final String title;
+
+  @override
+  String toString() {
+    return 'Exercise21Route1Args{key: $key, title: $title}';
+  }
 }
 
 /// generated route for
