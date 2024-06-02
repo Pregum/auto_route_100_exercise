@@ -209,6 +209,22 @@ abstract class _$MainRouter extends RootStackRouter {
         child: const Exercise1Page2(),
       );
     },
+    Exercise20LoginRoute.name: (routeData) {
+      final args = routeData.argsAs<Exercise20LoginRouteArgs>();
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: Exercise20LoginPage(
+          key: args.key,
+          title: args.title,
+        ),
+      );
+    },
+    Exercise20RegistrationCompleteRoute.name: (routeData) {
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const Exercise20RegistrationCompletePage(),
+      );
+    },
     Exercise2Route1.name: (routeData) {
       return AutoRoutePage<dynamic>(
         routeData: routeData,
@@ -995,6 +1011,58 @@ class Exercise1Route2 extends PageRouteInfo<void> {
         );
 
   static const String name = 'Exercise1Route2';
+
+  static const PageInfo<void> page = PageInfo<void>(name);
+}
+
+/// generated route for
+/// [Exercise20LoginPage]
+class Exercise20LoginRoute extends PageRouteInfo<Exercise20LoginRouteArgs> {
+  Exercise20LoginRoute({
+    Key? key,
+    required String title,
+    List<PageRouteInfo>? children,
+  }) : super(
+          Exercise20LoginRoute.name,
+          args: Exercise20LoginRouteArgs(
+            key: key,
+            title: title,
+          ),
+          initialChildren: children,
+        );
+
+  static const String name = 'Exercise20LoginRoute';
+
+  static const PageInfo<Exercise20LoginRouteArgs> page =
+      PageInfo<Exercise20LoginRouteArgs>(name);
+}
+
+class Exercise20LoginRouteArgs {
+  const Exercise20LoginRouteArgs({
+    this.key,
+    required this.title,
+  });
+
+  final Key? key;
+
+  final String title;
+
+  @override
+  String toString() {
+    return 'Exercise20LoginRouteArgs{key: $key, title: $title}';
+  }
+}
+
+/// generated route for
+/// [Exercise20RegistrationCompletePage]
+class Exercise20RegistrationCompleteRoute extends PageRouteInfo<void> {
+  const Exercise20RegistrationCompleteRoute({List<PageRouteInfo>? children})
+      : super(
+          Exercise20RegistrationCompleteRoute.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'Exercise20RegistrationCompleteRoute';
 
   static const PageInfo<void> page = PageInfo<void>(name);
 }

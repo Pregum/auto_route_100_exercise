@@ -38,7 +38,7 @@ class _Exercise18Page1State extends ConsumerState<Exercise18Page1> {
               await Future.delayed(const Duration(seconds: 2));
               // ログイン後にメイン画面へ遷移する
               final authProvider = ref.read(authNotifierProvider.notifier);
-              final user = User(
+              final user = User.empty(
                 id: 'test1',
                 name: 'Taro',
               );

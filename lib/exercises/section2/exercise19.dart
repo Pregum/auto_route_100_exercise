@@ -63,7 +63,7 @@ class _Exercise19Page1State extends ConsumerState<Exercise19Page1> {
               // ログイン後にメイン画面へ遷移する
               setState(() => authorizeState = AuthorizeState.authorized);
               final authProvider = ref.read(authNotifierProvider.notifier);
-              final user = User(
+              final user = User.empty(
                 id: 'test1',
                 name: 'Taro',
               );
