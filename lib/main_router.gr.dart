@@ -167,6 +167,36 @@ abstract class _$MainRouter extends RootStackRouter {
         ),
       );
     },
+    Exercise19Route1.name: (routeData) {
+      final args = routeData.argsAs<Exercise19Route1Args>();
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: Exercise19Page1(
+          key: args.key,
+          title: args.title,
+        ),
+      );
+    },
+    Exercise19Route2.name: (routeData) {
+      final args = routeData.argsAs<Exercise19Route2Args>();
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: Exercise19Page2(
+          key: args.key,
+          title: args.title,
+        ),
+      );
+    },
+    Exercise19PreRoute.name: (routeData) {
+      final args = routeData.argsAs<Exercise19PreRouteArgs>();
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: Exercise19PrePage(
+          key: args.key,
+          title: args.title,
+        ),
+      );
+    },
     Exercise1Route1.name: (routeData) {
       return AutoRoutePage<dynamic>(
         routeData: routeData,
@@ -824,6 +854,120 @@ class Exercise18Route3Args {
   @override
   String toString() {
     return 'Exercise18Route3Args{key: $key, title: $title}';
+  }
+}
+
+/// generated route for
+/// [Exercise19Page1]
+class Exercise19Route1 extends PageRouteInfo<Exercise19Route1Args> {
+  Exercise19Route1({
+    Key? key,
+    required String title,
+    List<PageRouteInfo>? children,
+  }) : super(
+          Exercise19Route1.name,
+          args: Exercise19Route1Args(
+            key: key,
+            title: title,
+          ),
+          initialChildren: children,
+        );
+
+  static const String name = 'Exercise19Route1';
+
+  static const PageInfo<Exercise19Route1Args> page =
+      PageInfo<Exercise19Route1Args>(name);
+}
+
+class Exercise19Route1Args {
+  const Exercise19Route1Args({
+    this.key,
+    required this.title,
+  });
+
+  final Key? key;
+
+  final String title;
+
+  @override
+  String toString() {
+    return 'Exercise19Route1Args{key: $key, title: $title}';
+  }
+}
+
+/// generated route for
+/// [Exercise19Page2]
+class Exercise19Route2 extends PageRouteInfo<Exercise19Route2Args> {
+  Exercise19Route2({
+    Key? key,
+    required String title,
+    List<PageRouteInfo>? children,
+  }) : super(
+          Exercise19Route2.name,
+          args: Exercise19Route2Args(
+            key: key,
+            title: title,
+          ),
+          initialChildren: children,
+        );
+
+  static const String name = 'Exercise19Route2';
+
+  static const PageInfo<Exercise19Route2Args> page =
+      PageInfo<Exercise19Route2Args>(name);
+}
+
+class Exercise19Route2Args {
+  const Exercise19Route2Args({
+    this.key,
+    required this.title,
+  });
+
+  final Key? key;
+
+  final String title;
+
+  @override
+  String toString() {
+    return 'Exercise19Route2Args{key: $key, title: $title}';
+  }
+}
+
+/// generated route for
+/// [Exercise19PrePage]
+class Exercise19PreRoute extends PageRouteInfo<Exercise19PreRouteArgs> {
+  Exercise19PreRoute({
+    Key? key,
+    required String title,
+    List<PageRouteInfo>? children,
+  }) : super(
+          Exercise19PreRoute.name,
+          args: Exercise19PreRouteArgs(
+            key: key,
+            title: title,
+          ),
+          initialChildren: children,
+        );
+
+  static const String name = 'Exercise19PreRoute';
+
+  static const PageInfo<Exercise19PreRouteArgs> page =
+      PageInfo<Exercise19PreRouteArgs>(name);
+}
+
+class Exercise19PreRouteArgs {
+  const Exercise19PreRouteArgs({
+    this.key,
+    required this.title,
+  });
+
+  final Key? key;
+
+  final String title;
+
+  @override
+  String toString() {
+    return 'Exercise19PreRouteArgs{key: $key, title: $title}';
   }
 }
 

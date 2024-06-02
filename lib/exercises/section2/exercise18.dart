@@ -15,6 +15,7 @@ class Exercise18Page1 extends ConsumerStatefulWidget {
   ConsumerState<Exercise18Page1> createState() => _Exercise18Page1State();
 }
 
+// 挙動の確認の為、pushReplaceではなく通常のpushで遷移している
 class _Exercise18Page1State extends ConsumerState<Exercise18Page1> {
   // var authorizing = false;
   var authorizeState = AuthorizeState.initial;

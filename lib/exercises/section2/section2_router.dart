@@ -23,4 +23,7 @@ List<AutoRoute> section2Routes(Ref ref) => [
       AutoRoute(page: Exercise18Route1.page),
       AutoRoute(page: Exercise18Route2.page, guards: [AuthGuard(ref)]),
       AutoRoute(page: Exercise18Route3.page),
+      AutoRoute(page: Exercise19PreRoute.page),
+      AutoRoute(page: Exercise19Route1.page),
+      AutoRoute(page: Exercise19Route2.page, guards: [AuthGuard(ref)]),
     ];
