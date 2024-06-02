@@ -17,6 +17,7 @@ import 'package:auto_route_100_exercise/exercises/section2/exercise14.dart';
 import 'package:auto_route_100_exercise/exercises/section2/exercise15.dart';
 import 'package:auto_route_100_exercise/exercises/section2/exercise16.dart';
 import 'package:auto_route_100_exercise/exercises/section2/exercise17.dart';
+import 'package:auto_route_100_exercise/exercises/section2/exercise18.dart';
 import 'package:auto_route_100_exercise/exercises/section2/section2_router.dart';
 import 'package:auto_route_100_exercise/main.dart';
 import 'package:flutter/material.dart';

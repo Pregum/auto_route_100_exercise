@@ -9,7 +9,9 @@ part of 'main_router_provider.dart';
 String _$mainRouterNotifierHash() =>
     r'5be28759b058531e53102b48f40a8111da460db3';
 
-/// See also [MainRouterNotifier].
+/// A provider that creates a [MainRouter] instance.
+///
+/// Copied from [MainRouterNotifier].
 @ProviderFor(MainRouterNotifier)
 final mainRouterNotifierProvider =
     AutoDisposeNotifierProvider<MainRouterNotifier, MainRouter>.internal(

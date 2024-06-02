@@ -10,12 +10,14 @@ class AuthGuard extends AutoRouteGuard {
   @override
   void onNavigation(NavigationResolver resolver, StackRouter router) {
     final authProvider = _ref.read(authNotifierProvider);
+    final user = authProvider.user;
     if (authProvider.isAuthenticated) {
-      debugPrint('Authenticated');
+      debugPrint('Authenticated. user: id - ${user?.id}, name - ${user?.name}');
       resolver.next(true);
     } else {
       // router.push(const LoginRoute());
-      debugPrint('Not authenticated');
+      debugPrint(
+          'Not authenticated. user: id - ${user?.id}, name - ${user?.name}');
       resolver.next(false);
     }
   }
